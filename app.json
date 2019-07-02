@@ -16,6 +16,10 @@
       "WEB_CONCURRENCY": {
         "description": "The number of processes to run.",
         "value": "1"
+      },
+      "DISABLE_COLLECTSTATIC": {
+        "description": "Don't run python manage.py collectstatic --noinput on deploy",
+        "value": "1"
       }
     },
     "formation": {
