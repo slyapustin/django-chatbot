@@ -1,1 +1,1 @@
-# django-celery
+# Motironig Django Celery application on Heroku
