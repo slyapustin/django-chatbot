@@ -1,0 +1,32 @@
+{
+    "name": "Django Celery Application",
+    "description": "This app is created to show how to use Celery Monitoring tool on Heroku.",
+    "keywords": [
+      "celery",
+      "django",
+      "heroku"
+    ],
+    "website": "https://django-celery.herokuapp.com/",
+    "repository": "https://github.com/inoks/django-celery",
+    "env": {
+      "SECRET_TOKEN": {
+        "description": "A secret key for verifying the integrity of signed cookies.",
+        "generator": "secret"
+      },
+      "WEB_CONCURRENCY": {
+        "description": "The number of processes to run.",
+        "value": "1"
+      }
+    },
+    "formation": {
+      "web": {
+        "quantity": 1,
+        "size": "free"
+      }
+    },
+    "buildpacks": [
+      {
+        "url": "heroku/python"
+      }
+    ]
+  }
