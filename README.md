@@ -1,1 +1,1 @@
-# Motironig Django Celery application on Heroku
+# Monitoring Celery application on Heroku
