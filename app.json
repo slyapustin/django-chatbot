@@ -36,6 +36,9 @@
     "addons": [
         {
             "plan": "heroku-postgresql"
+        },
+        {
+            "plan": "heroku-redis"
         }
     ]
   }
