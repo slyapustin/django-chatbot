@@ -9,8 +9,8 @@
     "website": "https://django-celery.herokuapp.com/",
     "repository": "https://github.com/inoks/django-celery",
     "env": {
-      "SECRET_TOKEN": {
-        "description": "A secret key for verifying the integrity of signed cookies.",
+      "DJANGO_SECRET_KEY": {
+        "description": "A secret key for a particular Django installation.",
         "generator": "secret"
       },
       "WEB_CONCURRENCY": {
