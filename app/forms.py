@@ -5,5 +5,5 @@ class AddForm(forms.Form):
     a = forms.IntegerField()
     b = forms.IntegerField()
 
-    def calculate(self):
-        add.delay(self.cleaned_data['a'], self.cleaned_data['b'])
+    def create_calculate_task(self):
+        return add.apply_async(args=[self.cleaned_data['a'], self.cleaned_data['b']])
