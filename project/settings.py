@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'app',
+    'channels',
 ]
 
 MIDDLEWARE = [
@@ -73,7 +74,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'project.wsgi.application'
-
+ASGI_APPLICATION = "project.routing.application"
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
@@ -130,3 +131,12 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 CELERY_BROKER_URL = os.environ['REDIS_URL']
 CELERY_RESULT_BACKEND = os.environ['REDIS_URL']
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [os.environ['REDIS_URL']],
+        },
+    },
+}
