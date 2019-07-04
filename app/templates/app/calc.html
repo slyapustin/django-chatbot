@@ -10,12 +10,14 @@
     <input id="calc-message-submit" type="button" value="Send"/>
 </body>
 <script>
+    var wss_protocol = (window.location.protocol == 'https:') ? 'wss://': 'ws://';
     var chatSocket = new WebSocket(
-        'ws://' + window.location.host + '/ws/calc/');
+        wss_protocol + window.location.host + '/ws/calc/'
+        );
 
     chatSocket.onmessage = function(e) {
         var data = JSON.parse(e.data);
-        var message = data['message'];
+        var message = data['message'];  
         document.querySelector('#calc-log').value += (message + '\n');
     };
 
