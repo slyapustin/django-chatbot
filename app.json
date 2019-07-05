@@ -1,6 +1,6 @@
 {
-    "name": "Django Chat Bot",
-    "description": "Django Chat Bot application with the background tasks processing and communications via WebSockets.",
+    "name": "Django Chatbot",
+    "description": "Django Chatbot application with the background tasks processing and communications via WebSockets.",
     "keywords": [
       "celery",
       "django",
@@ -9,8 +9,8 @@
       "channels",
       "django-channels"
     ],
-    "website": "https://github.com/inoks/django-celery/",
-    "repository": "https://github.com/inoks/django-celery",
+    "website": "https://github.com/inoks/django-chatbot/",
+    "repository": "https://github.com/inoks/django-chatbot/",
     "env": {
       "DJANGO_SECRET_KEY": {
         "description": "A secret key for a particular Django installation.",
@@ -37,4 +37,3 @@
         }
     ]
   }
-  

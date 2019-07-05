@@ -1,6 +1,6 @@
-# Django Chat Bot hosted on Heroku
+# Django Chatbot hosted on Heroku
 
-Django Chat Bot application with the background tasks processing and communications via WebSockets.
+Django Chatbot application with the background tasks processing and communications via WebSockets.
 
 ## Deployment
 You can host it on [Heroku](https://www.heroku.com) for free ([account verification required](https://devcenter.heroku.com/articles/account-verification)).
