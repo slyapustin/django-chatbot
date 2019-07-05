@@ -21,9 +21,12 @@ def url_status(url):
 
     status = cache.get(url)
     if not status:
-        r = requests.get(url)
-        status = r.status_code
-        cache.set(url, status, 60*60)
+        try:
+            r = requests.get(url)
+            status = r.status_code
+            cache.set(url, status, 60*60)
+        except requests.exceptions.RequestException:
+            status = 'Not available'
 
-    message = '{} status is {}'.format(url, status)
+    message = f'{url} status is {status}'
     async_to_sync(channel_layer.group_send)("chat", {"type": "chat.message", "message": message})
