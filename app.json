@@ -1,21 +1,20 @@
 {
-    "name": "Django Celery Application",
-    "description": "This app is created to show how to use Celery Monitoring tool on Heroku.",
+    "name": "Django Chat Bot",
+    "description": "Django Chat Bot application with the background tasks processing and communications via WebSockets.",
     "keywords": [
       "celery",
       "django",
-      "heroku"
+      "heroku",
+      "daphne",
+      "channels",
+      "django-channels"
     ],
-    "website": "https://django-celery.herokuapp.com/",
+    "website": "https://github.com/inoks/django-celery/",
     "repository": "https://github.com/inoks/django-celery",
     "env": {
       "DJANGO_SECRET_KEY": {
         "description": "A secret key for a particular Django installation.",
         "generator": "secret"
-      },
-      "WEB_CONCURRENCY": {
-        "description": "The number of processes to run.",
-        "value": "1"
       }
     },
     "formation": {
@@ -38,3 +37,4 @@
         }
     ]
   }
+  
