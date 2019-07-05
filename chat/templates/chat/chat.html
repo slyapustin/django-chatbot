@@ -2,10 +2,10 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>Chat Bot</title>
+    <title>Django Chatbot</title>
 </head>
 <body>
-    <textarea id="chat-log" cols="100" rows="20"></textarea><br/>
+    <textarea id="chat-log" cols="100" rows="20" readonly></textarea><br/>
     <input id="chat-message-input" type="text" size="100" placeholder="For ex.: sum 100 100 or status https://twitter.com"/><br/>
     <input id="chat-message-submit" type="button" value="Send"/>
 </body>
@@ -22,7 +22,7 @@
     };
 
     chatSocket.onclose = function(e) {
-        console.error('Socket closed unexpectedly');
+        document.querySelector('#chat-log').value += ('Socket closed unexpectedly, please reload the page.\n')
     };
 
     document.querySelector('#chat-message-input').focus();

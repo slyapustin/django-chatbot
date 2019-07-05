@@ -51,11 +51,10 @@ class ChatConsumer(WebsocketConsumer):
                 }
             )
 
-    # Receive message from calc
     def chat_message(self, event):
         message = event['message']
 
         # Send message to WebSocket
         self.send(text_data=json.dumps({
-            'message': message
+            'message': f'bot>{message}'
         }))
