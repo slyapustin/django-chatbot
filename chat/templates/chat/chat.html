@@ -2,7 +2,7 @@
 
 {% block body %}
     <textarea id="chat-log" cols="100" rows="20" readonly></textarea><br/>
-    <input id="chat-message-input" type="text" size="100" placeholder="For ex.: sum 100 100 or status twitter.com"/><br/>
+    <input id="chat-message-input" type="text" size="100" placeholder="Type `help` for the commands list."/><br/>
     <input id="chat-message-submit" type="button" value="Send"/>
 {% endblock %}
 
@@ -12,6 +12,10 @@
     var chatSocket = new WebSocket(
         wss_protocol + window.location.host + '/ws/chat/'
         );
+
+    chatSocket.onopen = function(e) {
+        document.querySelector('#chat-log').value += ('Welcome to the Django Chatbot.\nPlease type `help` for the commands list.\n')    
+    }
 
     chatSocket.onmessage = function(e) {
         var data = JSON.parse(e.data);
