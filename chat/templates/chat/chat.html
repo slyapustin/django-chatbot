@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8"/>
-    <title>Django Chatbot</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block body %}
     <textarea id="chat-log" cols="100" rows="20" readonly></textarea><br/>
-    <input id="chat-message-input" type="text" size="100" placeholder="For ex.: sum 100 100 or status https://twitter.com"/><br/>
+    <input id="chat-message-input" type="text" size="100" placeholder="For ex.: sum 100 100 or status twitter.com"/><br/>
     <input id="chat-message-submit" type="button" value="Send"/>
-</body>
+{% endblock %}
+
+{% block scripts%}
 <script>
     var wss_protocol = (window.location.protocol == 'https:') ? 'wss://': 'ws://';
     var chatSocket = new WebSocket(
@@ -42,4 +40,4 @@
         messageInputDom.value = '';
     };
 </script>
-</html>
+{% endblock %}

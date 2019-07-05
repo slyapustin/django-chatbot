@@ -56,5 +56,5 @@ class ChatConsumer(WebsocketConsumer):
 
         # Send message to WebSocket
         self.send(text_data=json.dumps({
-            'message': f'bot>{message}'
+            'message': f'bot> {message}'
         }))
