@@ -7,7 +7,9 @@
       "heroku",
       "daphne",
       "channels",
-      "django-channels"
+      "django-channels",
+      "chatbot",
+      "websockets"
     ],
     "website": "https://github.com/inoks/django-chatbot/",
     "repository": "https://github.com/inoks/django-chatbot/",
