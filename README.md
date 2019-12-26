@@ -2,7 +2,7 @@
 
 Django Chatbot with the background tasks processing and communications via WebSockets.
 
-Please check my article - [Heroku Chatbot with Celery, WebSockets, and Redis](https://itnext.io/heroku-chatbot-with-celery-websockets-and-redis-340fcd160f06) for more details.
+For more details please check my article - [Heroku Chatbot with Celery, WebSockets, and Redis](https://itnext.io/heroku-chatbot-with-celery-websockets-and-redis-340fcd160f06).
 
 ## Deployment
 You can host it on [Heroku](https://www.heroku.com) for free ([account verification required](https://devcenter.heroku.com/articles/account-verification)).
