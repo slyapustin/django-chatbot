@@ -9,4 +9,3 @@ psycopg2-binary==2.8.6
 redis==3.5.3
 requests==2.25.1
 whitenoise==5.2.0
-flower==0.9.7
