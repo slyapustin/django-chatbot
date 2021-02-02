@@ -3,3 +3,5 @@ db.sqlite3
 *.env
 *.rdb
 .vscode/
+venv
+.idea
