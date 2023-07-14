@@ -9,8 +9,4 @@ spec:
         repo_clone_url: https://github.com/slyapustin/django-chatbot.git
     - name: worker
       environment_slug: python
-      source_dir: .
-      run_command: elery -A project worker --loglevel info
-      git:
-        branch: do
-        repo_clone_url: https://github.com/slyapustin/django-chatbot.git
+      run_command: celery -A project worker --loglevel info
