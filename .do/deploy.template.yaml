@@ -1,5 +1,15 @@
 spec:
   name: django-chatbot
+  envs:
+    - key: DATABASE_URL
+      value: ${default-db.DATABASE_URL}
+      scope: RUN_TIME
+    - key: DJANGO_SECRET_KEY
+      value: "REPLACE_ME"
+      type: SECRET
+    - key: REDIS_URL
+      scope: RUN_TIME
+      value: ${default-redis.DATABASE_URL}
   services:
     - name: web
       environment_slug: python
@@ -8,32 +18,12 @@ spec:
       git:
         branch: do
         repo_clone_url: https://github.com/slyapustin/django-chatbot.git
-      envs:
-        - key: DATABASE_URL
-          value: ${default-db.DATABASE_URL}
-          scope: RUN_TIME
-        - key: DJANGO_SECRET_KEY
-          value: "REPLACE_ME"
-          type: SECRET
-        - key: REDIS_URL
-          scope: RUN_TIME
-          value: ${default-redis.DATABASE_URL}
   workers:
     - name: worker
       git:
         branch: do
         repo_clone_url: https://github.com/slyapustin/django-chatbot.git
       run_command: celery -A project worker --loglevel info
-      envs:
-        - key: DATABASE_URL
-          value: ${default-db.DATABASE_URL}
-          scope: RUN_TIME
-        - key: DJANGO_SECRET_KEY
-          value: "REPLACE_ME"
-          type: SECRET
-        - key: REDIS_URL
-          scope: RUN_TIME
-          value: ${default-redis.DATABASE_URL}
   databases:
     - name: default-db
       engine: PG
