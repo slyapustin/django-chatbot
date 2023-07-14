@@ -10,7 +10,7 @@ For more details please check my article - [Heroku Chatbot with Celery, WebSocke
 
 Digital Ocean provides an easy way to deploy apps using Digital Ocean App Platform.
 
-[![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/slyapustin/django-chat/tree/do&refcode=08ce1ee690de)
+[![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/slyapustin/django-chatbot/tree/do&refcode=08ce1ee690de)
 
 ### Heroku
 You can host it on [Heroku](https://www.heroku.com) ([account verification required](https://devcenter.heroku.com/articles/account-verification)).
