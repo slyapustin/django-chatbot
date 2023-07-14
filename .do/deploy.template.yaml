@@ -4,7 +4,7 @@ spec:
     - name: web
       environment_slug: python
       instance_count: 1
-      instance_size_slug: s-1vcpu-512mb-10gb
+      instance_size_slug: basic-xxs
       git:
         branch: do
         repo_clone_url: https://github.com/slyapustin/django-chatbot.git
