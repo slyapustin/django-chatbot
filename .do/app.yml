@@ -3,7 +3,6 @@ services:
   - name: web
     environment_slug: python
     instance_count: 1
-    size: s-1vcpu-1gb
   - name: worker
     environment_slug: python
     source_dir: .
