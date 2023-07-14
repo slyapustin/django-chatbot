@@ -13,11 +13,11 @@ spec:
           value: ${default-db.DATABASE_URL}
           scope: RUN_TIME
   workers:
-    git:
-      branch: do
-      repo_clone_url: https://github.com/slyapustin/django-chatbot.git
-    name: worker
-    run_command: celery -A project worker --loglevel info
+    - name: worker
+      git:
+        branch: do
+        repo_clone_url: https://github.com/slyapustin/django-chatbot.git
+      run_command: celery -A project worker --loglevel info
   databases:
     - name: default-db
       engine: PG
