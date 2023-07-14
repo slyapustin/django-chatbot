@@ -1,6 +1,5 @@
 spec:
   name: django-chatbot
-  description: Django Chatbot application with background task processing and communications via WebSockets.
   repository: https://github.com/slyapustin/django-chatbot/
 
   services:
