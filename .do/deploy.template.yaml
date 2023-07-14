@@ -9,7 +9,7 @@ spec:
       type: SECRET
     - key: REDIS_URL
       scope: RUN_TIME
-      value: ${default-redis.DATABASE_URL}
+      value: ${default-redis.REDIS_URL}
     - key: DISABLE_COLLECTSTATIC
       value: "1"
     - key: ALLOWED_HOSTS
