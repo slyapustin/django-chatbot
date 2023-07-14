@@ -15,6 +15,9 @@ spec:
         - key: DJANGO_SECRET_KEY
           value: "REPLACE_ME"
           type: SECRET
+        - key: REDIS_URL
+          scope: RUN_TIME
+          value: ${default-redis.DATABASE_URL}
   workers:
     - name: worker
       git:
@@ -28,7 +31,14 @@ spec:
         - key: DJANGO_SECRET_KEY
           value: "REPLACE_ME"
           type: SECRET
+        - key: REDIS_URL
+          scope: RUN_TIME
+          value: ${default-redis.DATABASE_URL}
   databases:
     - name: default-db
       engine: PG
       production: false
+    - name: default-redis
+      engine: REDIS
+      production: false
+      cluster_name: redis
