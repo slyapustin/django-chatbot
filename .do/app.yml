@@ -4,10 +4,6 @@ services:
     environment_slug: python
     instance_count: 1
     size: s-1vcpu-1gb
-    routes:
-      - path: /
-        destinations:
-          - web
   - name: worker
     environment_slug: python
     source_dir: .

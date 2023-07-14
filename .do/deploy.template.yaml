@@ -5,10 +5,6 @@ spec:
       environment_slug: python
       instance_count: 1
       size: s-1vcpu-1gb
-      routes:
-        - path: /
-          destinations:
-            - web
       git:
         branch: do
         repo_clone_url: https://github.com/slyapustin/django-chatbot.git
