@@ -10,6 +10,8 @@ spec:
     - key: REDIS_URL
       scope: RUN_TIME
       value: ${default-redis.DATABASE_URL}
+    - key: DISABLE_COLLECTSTATIC
+      value: 1
   services:
     - name: web
       environment_slug: python
