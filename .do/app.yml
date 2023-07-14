@@ -15,12 +15,3 @@ services:
     environment_slug: python
     source_dir: .
     run_command: elery -A project worker --loglevel info
-
-components:
-  - name: web
-    environment_slug: python
-    source_dir: .
-    build_command: python manage.py migrate --noinput
-    run_command: daphne project.asgi:application --port $PORT --bind 0.0.0.0
-    envs:
-      - DJANGO_SECRET_KEY
