@@ -12,12 +12,22 @@ spec:
         - key: DATABASE_URL
           value: ${default-db.DATABASE_URL}
           scope: RUN_TIME
+        - key: DJANGO_SECRET_KEY
+          value: "REPLACE_ME"
+          type: SECRET
   workers:
     - name: worker
       git:
         branch: do
         repo_clone_url: https://github.com/slyapustin/django-chatbot.git
       run_command: celery -A project worker --loglevel info
+      envs:
+        - key: DATABASE_URL
+          value: ${default-db.DATABASE_URL}
+          scope: RUN_TIME
+        - key: DJANGO_SECRET_KEY
+          value: "REPLACE_ME"
+          type: SECRET
   databases:
     - name: default-db
       engine: PG
