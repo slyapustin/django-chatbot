@@ -1,6 +1,4 @@
 name: django-chatbot
-repository: https://github.com/slyapustin/django-chatbot/
-
 services:
   - name: web
     environment_slug: python
