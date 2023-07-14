@@ -1,9 +1,0 @@
-name: django-chatbot
-services:
-  - name: web
-    environment_slug: python
-    instance_count: 1
-  - name: worker
-    environment_slug: python
-    source_dir: .
-    run_command: elery -A project worker --loglevel info
