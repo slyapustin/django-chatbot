@@ -30,5 +30,5 @@ spec:
       production: false
     - name: default-redis
       engine: REDIS
-      production: false
+      production: true
       cluster_name: redis
