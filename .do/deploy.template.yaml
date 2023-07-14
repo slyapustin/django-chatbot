@@ -12,6 +12,8 @@ spec:
       value: ${default-redis.DATABASE_URL}
     - key: DISABLE_COLLECTSTATIC
       value: "1"
+    - key: ALLOWED_HOSTS
+      value: ".ondigitalocean.app"
   services:
     - name: web
       environment_slug: python
