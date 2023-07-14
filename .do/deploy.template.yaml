@@ -7,6 +7,11 @@ spec:
       git:
         branch: do
         repo_clone_url: https://github.com/slyapustin/django-chatbot.git
-    - name: worker
-      environment_slug: python
-      run_command: celery -A project worker --loglevel info
+      envs:
+        - key: DATABASE_URL
+          value: ${default-db.DATABASE_URL}
+          scope: RUN_TIME
+  databases:
+    - name: default-db
+      engine: PG
+      production: false
