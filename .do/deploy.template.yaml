@@ -35,4 +35,4 @@ spec:
     - name: default-redis
       engine: REDIS
       production: true
-      cluster_name: default-redis
+      size: db-s-dev-database
