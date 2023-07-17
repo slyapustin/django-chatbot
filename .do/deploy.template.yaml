@@ -34,5 +34,5 @@ spec:
       production: false
     - name: default-redis
       engine: REDIS
-      production: true
+      production: false
       size: db-s-dev-database
