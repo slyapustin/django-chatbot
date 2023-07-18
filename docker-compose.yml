@@ -1,0 +1,37 @@
+version: '3.3'
+services:
+  web:
+    build: .
+    command: bash -c "python ./manage.py migrate && daphne project.asgi:application --port 8000 --bind 0.0.0.0"
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - redis
+      - postgres
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - DJANGO_SECRET_KEY=keep-it-secret
+      - DATABASE_URL=postgres://postgres:postgres@postgres:5432/postgres
+
+  worker:
+    build: .
+    command: celery -A project worker --loglevel info
+    volumes:
+      - .:/app
+    depends_on:
+      - web
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - REMAP_SIGTERM=SIGQUIT
+      - DJANGO_SECRET_KEY=keep-it-secret
+      - DATABASE_URL=postgres://postgres:postgres@postgres:5432/postgres
+
+  redis:
+    image: "redis:alpine"
+
+  postgres:
+    image: "postgres:13.4"
+    environment:
+      - POSTGRES_PASSWORD=postgres
