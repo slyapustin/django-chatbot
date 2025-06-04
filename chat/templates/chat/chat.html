@@ -6,7 +6,7 @@
     <input id="chat-message-submit" type="button" value="Send"/>
 {% endblock %}
 
-{% block scripts%}
+{% block scripts %}
 <script>
     var wss_protocol = (window.location.protocol == 'https:') ? 'wss://': 'ws://';
     var chatSocket = new WebSocket(
