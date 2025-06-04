@@ -1,6 +1,6 @@
 # Django Chatbot
 
-The Django Chatbot is a chatbot application that utilizes background tasks processing and communication via WebSockets.
+The Django Chatbot is a chatbot application that utilizes background task processing and communication via WebSockets.
 
 For more detailed information, please refer to my article titled [Heroku Chatbot with Celery, WebSockets, and Redis](https://itnext.io/heroku-chatbot-with-celery-websockets-and-redis-340fcd160f06).
 
