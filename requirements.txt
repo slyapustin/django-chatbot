@@ -4,7 +4,7 @@ channels==4.0.0
 daphne==4.0.0
 dj-database-url==2.1.0
 django-redis==5.4.0
-Django==5.0
+Django==5.1.10
 psycopg2-binary==2.9.6
 redis==5.0.1
 requests==2.31.0
