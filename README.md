@@ -19,6 +19,13 @@ Click the button below to deploy the chatbot on Heroku:
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
+### DigitalOcean
+You can also deploy the chatbot on [DigitalOcean App Platform](https://www.digitalocean.com/products/app-platform/?refcode=08ce1ee690de).
+
+Click the button below to deploy the chatbot on DigitalOcean:
+
+[![Deploy to DigitalOcean](https://www.deploy.digitalocean.com/button.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/slyapustin/django-chatbot&refcode=08ce1ee690de)
+
 ## Technology Stack
 The chatbot utilizes the following technologies:
 
@@ -28,6 +35,7 @@ The chatbot utilizes the following technologies:
 - [Redis](https://redis.io/): A message broker and cache backend.
 - [Daphne](https://github.com/django/daphne): An HTTP and WebSocket protocol server.
 - [Heroku](https://www.heroku.com): The hosting platform.
+- [DigitalOcean](https://www.digitalocean.com?refcode=08ce1ee690de): An alternative hosting platform.
 
 ## Supported commands
 The chatbot supports the following commands:

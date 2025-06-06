@@ -1,0 +1,40 @@
+name: django-chatbot
+services:
+  - name: web
+    dockerfile_path: Dockerfile
+    run_command: daphne project.asgi:application --port $PORT --bind 0.0.0.0
+    environment_slug: python
+    predeploy:
+      command: python manage.py migrate
+    http_port: 8000
+    envs:
+      - key: DJANGO_SECRET_KEY
+        generate: true
+      - key: DATABASE_URL
+        value: ${db.DATABASE_URL}
+      - key: REDIS_URL
+        value: ${redis.REDIS_URL}
+    instance_count: 1
+    instance_size_slug: basic-xxs
+    routes:
+      - path: /
+  - name: worker
+    dockerfile_path: Dockerfile
+    run_command: celery -A project worker --loglevel info
+    environment_slug: python
+    envs:
+      - key: DJANGO_SECRET_KEY
+        generate: true
+      - key: DATABASE_URL
+        value: ${db.DATABASE_URL}
+      - key: REDIS_URL
+        value: ${redis.REDIS_URL}
+    instance_count: 1
+    instance_size_slug: basic-xxs
+databases:
+  - name: db
+    engine: PG
+    version: "13"
+  - name: redis
+    engine: REDIS
+    version: "6"
