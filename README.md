@@ -22,9 +22,6 @@ Click the button below to deploy the chatbot on Heroku:
 ### DigitalOcean
 You can also deploy the chatbot on [DigitalOcean App Platform](https://www.digitalocean.com/products/app-platform/?refcode=08ce1ee690de).
 
-Click the button below to deploy the chatbot on DigitalOcean:
-
-[![Deploy to DigitalOcean](https://www.deploy.digitalocean.com/button.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/slyapustin/django-chatbot&refcode=08ce1ee690de)
 
 ## Technology Stack
 The chatbot utilizes the following technologies:
